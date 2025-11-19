@@ -8,7 +8,7 @@ const bookingsRouter = require('./routes/booking');
 const app = express();
 
 // CORS - allow your frontend origin
-const FRONTEND = (process.env.FRONTEND_ORIGIN || '*')
+const FRONTEND = (process.env.FRONTEND_ORIGIN || '')
     .split(',')
   .map(s => s.trim())
   .filter(Boolean);
