@@ -3,6 +3,7 @@ import { Carousel, Container, Row, Col, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Home.css'; // <-- add this file (contents below)
 import rishikesh from '../assets/image/rishikesh.jpg';
+import temple2 from '../assets/image/temple2.jpg';
 import service from '../assets/image/service.jpg';
 import car0 from '../assets/image/car0.jpg';
 import recievingpassenger from '../assets/image/recievingpassenger.jpg';
