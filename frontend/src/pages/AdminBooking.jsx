@@ -6,7 +6,7 @@ import * as XLSX from 'xlsx';
 import.meta.env.VITE_API_BASE
 import.meta.env.VITE_ADMIN_KEY
 
-const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:4000';
+const API_BASE = import.meta.env.VITE_API_BASE || 'https://taxisite-zzyk.onrender.com';
 const ADMIN_KEY = import.meta.env.VITE_ADMIN_KEY || localStorage.getItem('admin_key') || '';
 
 export default function AdminBookings() {
