@@ -1,0 +1,43 @@
+/* About.css */
+
+/* SECTION: full-bleed hero background */
+.about-hero {
+  width: 100%;
+  background: linear-gradient(180deg, #0d1b2a 0%, #071022 100%);
+  color: #fff;
+  /* remove any default margins/padding that might cause gaps */
+  margin: 0;
+  padding: 0;
+}
+
+/* inner hero content keeps padding but no extra side padding from Container */
+.about-hero-inner {
+  max-width: 1200px;         /* limit inner text width */
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+/* keep the story image filling its column */
+.about-hero-img {
+  height: 100%;
+  object-fit: cover;
+}
+
+/* small utility for icon-circle used in cards */
+.icon-circle {
+  width: 64px;
+  height: 64px;
+  line-height: 64px;
+  border-radius: 50%;
+  background: rgba(255, 193, 7, 0.12); /* light yellow bg */
+  font-size: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Debug helper - uncomment when you debug layout */
+/*
+.about-hero { outline: 3px solid red; }
+.container, .container-fluid { outline: 1px dashed rgba(0,0,0,0.08); }
+*/

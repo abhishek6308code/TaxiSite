@@ -1,0 +1,27 @@
+/* Footer.css — small utilities to align footer spacing and responsiveness */
+
+.site-footer {
+  /* ensure footer sits below content and is visually separated */
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.site-footer p, .site-footer a {
+  color: #e9ecef;
+}
+
+.site-footer .text-warning {
+  color: #ffb703 !important; /* warmer yellow for branding */
+}
+
+/* Ensure links have a visible focus outline for accessibility */
+.site-footer a:focus {
+  outline: 3px solid rgba(255,183,3,0.15);
+  outline-offset: 2px;
+}
+
+/* Small screens: increase spacing so the footer isn't cramped */
+@media (max-width: 575.98px) {
+  .site-footer {
+    padding-bottom: calc(var(--navbar-height, 64px) / 2);
+  }
+}

@@ -1,0 +1,163 @@
+/* Navbar.css — responsive, touch-friendly navbar styles */
+
+/* Set navbar height variable (used by pages to offset hero). 
+   If your navbar height differs, change this value. */
+:root {
+  --navbar-height: 64px;
+}
+
+/* Navbar base */
+.navbar-custom {
+  z-index: 1100; /* above most page content (carousel etc.) */
+  box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+  padding-top: 0.35rem;
+  padding-bottom: 0.35rem;
+  min-height: var(--navbar-height);
+}
+
+/* Brand tweaks */
+.navbar-custom .navbar-brand {
+  font-size: 1.05rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Prevent icon overflow and align vertically */
+.navbar-custom .navbar-brand .bi {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+/* Nav links base */
+.nav-item-custom {
+  padding: 0.6rem 0.9rem !important;
+  font-size: 0.95rem;
+  font-weight: 600;
+  white-space: nowrap;           /* prevent breaking in middle */
+  letter-spacing: 0.02em;
+  border-radius: 6px;
+}
+
+/* Make the toggler larger for touch devices */
+.navbar-custom .navbar-toggler {
+  padding: 0.45rem 0.6rem;
+  border-radius: 8px;
+}
+
+/* Toggler icon color contrast */
+.navbar-custom .navbar-toggler-icon {
+  filter: invert(1) brightness(0.9);
+}
+
+/* Hover / focus state for links */
+.nav-item-custom:hover,
+.nav-item-custom:focus {
+  background-color: rgba(255,255,255,0.04);
+  text-decoration: none !important;
+  outline: none;
+}
+
+/* Mobile: when collapsed, make menu items full-width and easy to tap */
+@media (max-width: 991.98px) {
+  .navbar-custom .navbar-collapse {
+    background-color: #111; /* match dark bg so menu looks solid */
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  }
+
+  .nav-item-custom {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    padding: 0.85rem 0.75rem !important;
+    margin: 0.18rem 0 !important;
+  }
+
+  .navbar-custom .navbar-brand {
+    font-size: 1rem;
+  }
+}
+
+/* Offcanvas specific improvements (react-bootstrap offcanvas uses .offcanvas) */
+.offcanvas {
+  background-color: #0d1115; /* slightly different dark for depth */
+  color: #fff;
+}
+
+.offcanvas .nav-link {
+  color: #e9ecef;
+}
+
+.offcanvas .nav-link:hover,
+.offcanvas .nav-link:focus {
+  color: #fff;
+  background-color: rgba(255,255,255,0.03);
+}
+
+/* Ensure offcanvas close button is visible */
+.offcanvas .btn-close {
+  filter: invert(1) grayscale(1) brightness(2);
+}
+
+/* Make the menu items easier to tap on small screens */
+@media (max-width: 575.98px) {
+  .nav-item-custom {
+    padding: 1.05rem 0.75rem !important;
+    font-size: 1rem;
+  }
+  .navbar-custom .navbar-brand {
+    font-size: 0.95rem;
+  }
+}
+
+/* Small phones: slightly larger tap area, reduce brand size to save space */
+@media (max-width: 575.98px) {
+  .navbar-custom {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    min-height: 56px;
+  }
+
+  :root { --navbar-height: 56px; } /* update variable for small screens */
+
+  .nav-item-custom {
+    padding: 0.95rem 0.5rem !important;
+    font-size: 0.95rem;
+  }
+}
+
+/* Desktop: more breathing room for links */
+@media (min-width: 992px) {
+  .nav-item-custom {
+    padding: 0.55rem 1rem !important;
+  }
+
+  .navbar-custom {
+    padding-top: 0.45rem;
+    padding-bottom: 0.45rem;
+  }
+}
+
+/* Defensive: prevent global styles from shrinking the nav items */
+.navbar-custom .nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* If using centered nav on small screens - ensure text centers */
+.navbar-custom .navbar-nav {
+  gap: 0.25rem;
+}
+
+/* Accessibility: focus visible */
+.nav-item-custom:focus-visible {
+  box-shadow: 0 0 0 3px rgba(13,110,253,0.15);
+  border-radius: 6px;
+}
+
+/* If you see your hero still being overlapped, ensure you reference --navbar-height in page CSS like:
+   .safe-top { padding-top: calc(var(--navbar-height) + 0.75rem) !important; }
+   (We used this in About.css) */
