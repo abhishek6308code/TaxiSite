@@ -8,7 +8,24 @@ const bookingsRouter = require('./routes/booking');
 const app = express();
 
 // CORS - allow your frontend origin
-const FRONTEND = process.env.FRONTEND_ORIGIN || '*';
+const FRONTEND = (process.env.FRONTEND_ORIGIN || '')
+    .split(',')
+  .map(s => s.trim())
+  .filter(Boolean);
+const corsOptions = {
+  origin: function(origin, callback) {
+    // allow requests with no origin (curl, mobile apps, server-to-server)
+    if (!origin) return callback(null, true);
+    if (FRONTENDS.indexOf(origin) !== -1) {
+      return callback(null, true);
+    } else {
+      return callback(new Error('CORS policy: This origin is not allowed: ' + origin));
+    }
+  },
+  methods: ['GET','POST','PUT','PATCH','DELETE','OPTIONS'],
+  allowedHeaders: ['Content-Type','Authorization','x-admin-key','X-Requested-With'],
+  credentials: true, // if you use cookies/auth
+};
 app.use(cors({ origin: FRONTEND, optionsSuccessStatus: 200 }));
 
 app.use(express.json());

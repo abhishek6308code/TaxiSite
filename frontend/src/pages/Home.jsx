@@ -3,9 +3,8 @@ import { Carousel, Container, Row, Col, Card} from 'react-bootstrap';
 //,  
 import { Link } from 'react-router-dom';
 import './Home.css'; // <-- add this file (contents below)
-
-import TaxiSiteCrausal from '../assets/image/TaxiSiteCrausal1.jpg';
-
+import rishikesh from '../assets/image/rishikesh.jpg';
+import service from '../assets/image/service.jpg';
 import car0 from '../assets/image/car0.jpg';
 import recievingpassenger from '../assets/image/recievingpassenger.jpg';
 import price from '../assets/image/price.jpg';
@@ -30,79 +29,78 @@ function Home() {
   };
   return (
     <>
+  <Carousel interval={1000} pause="hover" touch>
+        <Carousel.Item>
+          <img
+            className="d-block home-carousel-img  w-100 "
+            // src="https://images.pexels.com/photos/1231622/pexels-photo-1231622.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop"
+            src={rishikesh}
+            alt="Taxi Service 1"
+            loading="lazy"
+          />
+          <Carousel.Caption className="home-caption">
+            <h1>Reliable Taxi Service</h1>
+            <p>Your trusted transportation partner, available 24/7</p>
+          </Carousel.Caption>
+        </Carousel.Item>
 
-      <Carousel 
-  interval={2000} 
-  pause="hover" 
-  touch 
-  fade={false} 
-  controls={true} 
-  indicators={true}
->
-  
-  <Carousel.Item>
-    <img className="d-block home-carousel-img" src={Dehradun} alt="Taxi Service 2" loading="lazy" />
-    <Carousel.Caption className="home-caption">
-      <h1>Safe & Comfortable Rides</h1>
-      <p>Professional drivers ensuring your safety and comfort</p>
-    </Carousel.Caption>
-  </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block home-carousel-img  w-100 "
+            // src="https://images.pexels.com/photos/1545743/pexels-photo-1545743.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop"
+             src={rishikesh}
+            alt="Taxi Service 2"
+            loading="lazy"
+          />
+          <Carousel.Caption className="home-caption">
+            <h1>Safe & Comfortable Rides</h1>
+            <p>Professional drivers ensuring your safety and comfort</p>
+          </Carousel.Caption>
+        </Carousel.Item>
 
-  <Carousel.Item>
-    <img className="d-block home-carousel-img" src={TaxiSiteCrausal} alt="Taxi Service 1" loading="lazy" />
-    <Carousel.Caption className="home-caption">
-      <h1>Reliable Taxi Service</h1>
-      <p>Your trusted transportation partner, available 24/7</p>
-    </Carousel.Caption>
-  </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block home-carousel-img  w-100 "
+            // src="https://images.pexels.com/photos/18159386/pexels-photo-18159386.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop"
+             src={rishikesh}
+            alt="Taxi Service 3"
+            loading="lazy"
+          />
+          <Carousel.Caption className="home-caption">
+            <h1>Affordable Rates</h1>
+            <p>Competitive pricing with no hidden charges</p>
+          </Carousel.Caption>
+        </Carousel.Item>
 
-  <Carousel.Item>
-    <img className="d-block home-carousel-img" src={c2} alt="Taxi Service 2" loading="lazy" />
-    <Carousel.Caption className="home-caption">
-      <h1>Safe & Comfortable Rides</h1>
-      <p>Professional drivers ensuring your safety and comfort</p>
-    </Carousel.Caption>
-  </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block home-carousel-img  w-100 "
+            // src="https://images.pexels.com/photos/919073/pexels-photo-919073.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop"
+             src={rishikesh}
+            alt="Taxi Service 4"
+            loading="lazy"
+          />
+          <Carousel.Caption className="home-caption">
+            <h1>Quick Response Time</h1>
+            <p>We arrive promptly when you need us</p>
+          </Carousel.Caption>
+        </Carousel.Item>
 
-  <Carousel.Item>
-    <img className="d-block home-carousel-img" src={TaxiSiteCrausal} alt="Taxi Service 3" loading="lazy" />
-    <Carousel.Caption className="home-caption">
-      <h1>Affordable Rates</h1>
-      <p>Competitive pricing with no hidden charges</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-
-  <Carousel.Item>
-    <img className="d-block home-carousel-img" src={c3} alt="Taxi Service 4" loading="lazy" />
-    <Carousel.Caption className="home-caption">
-      <h1>Quick Response Time</h1>
-      <p>We arrive promptly when you need us</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img className="d-block home-carousel-img" src={TaxiSiteCrausal} alt="Taxi Service 3" loading="lazy" />
-    <Carousel.Caption className="home-caption">
-      <h1>Affordable Rates</h1>
-      <p>Competitive pricing with no hidden charges</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img className="d-block home-carousel-img" src={c4} alt="Taxi Service 5" loading="lazy" />
-    <Carousel.Caption className="home-caption">
-      <h1>Modern Fleet</h1>
-      <p>Well-maintained vehicles for a smooth journey</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img className="d-block home-carousel-img" src={c5} alt="Taxi Service 5" loading="lazy" />
-    <Carousel.Caption className="home-caption">
-      <h1>Modern Fleet</h1>
-      <p>Well-maintained vehicles for a smooth journey</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-</Carousel>
-
-   
+        <Carousel.Item>
+          <img
+            className="d-block home-carousel-img  w-100 "
+            // src="https://images.pexels.com/photos/1119555/pexels-photo-1119555.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop"
+            src={rishikesh}
+            alt="Taxi Service 5"
+            loading="lazy"
+          />
+          <Carousel.Caption className="home-caption">
+            <h1>Modern Fleet</h1>
+            <p>Well-maintained vehicles for a smooth journey</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
+    
 
       <Container className="my-5">
         <h2 className="text-center mb-4">Why Choose Us</h2>

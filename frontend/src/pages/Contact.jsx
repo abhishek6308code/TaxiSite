@@ -4,7 +4,7 @@ import { useState } from 'react';
 import axios from 'axios';
 
 function Contact() {
-  const API_ENDPOINT = 'http://localhost:4000/api/bookings'; // <-- change this to your backend endpoint
+  const API_ENDPOINT = 'https://taxisitebackend.onrender.com/api/bookings'; // <-- change this to your backend endpoint
 
   const [form, setForm] = useState({
     name: '',
