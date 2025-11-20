@@ -10,7 +10,7 @@ import car0 from '../assets/image/car0.jpg';
 import recievingpassenger from '../assets/image/recievingpassenger.jpg';
 import price from '../assets/image/price.jpg';
 
-import alltimeservice from '../assets/image/AllTimeService.jpg';
+import alltimeservice from '../assets/image/alltimeservice.jpg';
 
 import c2 from '../assets/image/c2.jpg';
 import c3 from '../assets/image/c3.jpg';
