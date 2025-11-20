@@ -4,6 +4,10 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./About.css";
 import fleet from '../assets/image/fleet.jpg';
+import taxisite from '../assets/image/TaxiSiteCrausal1.jpg';
+
+import recievingpassenger from '../assets/image/recievingpassenger.jpg';
+import rentalService from '../assets/image/rentalvechicle.jpg';
 
 function About() {
   return (
@@ -26,7 +30,39 @@ function About() {
       <Container className="my-5 about-container">
         <Row className="align-items-center mb-5">
           {/* image first on mobile then text on larger screens */}
-          <Col xs={12} lg={6} className="mb-4 mb-lg-0 order-1 order-lg-0">
+          <Col xs={15} lg={6} className="mb-4 mb-lg-0 order-1 order-lg-0">
+            <img
+              // src="https://images.pexels.com/photos/1329711/pexels-photo-1329711.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              src={recievingpassenger}
+              alt="Our Story"
+              className="img-fluid rounded shadow w-100 about-hero-img"
+              loading="lazy"
+            />
+          </Col>
+
+          <Col xs={9} lg={6} className="order-0 order-lg-1">
+            <h2>Our Story</h2>
+            <p>
+              At Radha Travel, we believe every journey should be safe, comfortable, and hassle-free. With years of experience in the transportation industry, we take pride in offering reliable taxi services that meet the needs of locals, tourists, families, and business travelers alike.
+            </p>
+            <p>
+              Our mission is simple — to provide punctual, affordable, and comfortable rides that you can depend on anytime, anywhere.
+            </p>
+          </Col>
+        </Row>
+
+        <Row className="align-items-center mb-5">
+          <Col xs={12} lg={6} className="order-1 order-lg-0">
+            <h2>Who WE Are</h2>
+            <p>
+             We are a dedicated taxi service company committed to offering high-quality transportation with a focus on safety, professionalism, and customer satisfaction. Our team of trained and courteous drivers ensures that every ride with us is smooth and secure.
+            </p>
+            <p>
+              With a growing fleet of well-maintained vehicles, we are equipped to handle all types of travel needs — from daily city rides to long-distance journeys.
+            </p>
+          </Col>
+          {/* image first on mobile then text on larger screens */}
+          <Col xs={12} lg={6} className="mb-4 mb-lg-0 order-0 order-lg-1">
             <img
               // src="https://images.pexels.com/photos/1329711/pexels-photo-1329711.jpeg?auto=compress&cs=tinysrgb&w=1200"
               src={fleet}
@@ -36,20 +72,9 @@ function About() {
             />
           </Col>
 
-          <Col xs={12} lg={6} className="order-0 order-lg-1">
-            <h2>Our Story</h2>
-            <p>
-              Founded in 2010, our taxi service has been committed to providing reliable, safe, and comfortable
-              transportation to our community. What started as a small operation with just a few vehicles has
-              grown into a trusted service with a modern fleet and experienced drivers.
-            </p>
-            <p>
-              We understand that transportation is more than just getting from point A to point B. It's about
-              reliability, safety, comfort, and peace of mind. That's why we've built our business on these
-              core values.
-            </p>
-          </Col>
+
         </Row>
+
 
         <h2 className="text-center mb-4">Our Values</h2>
         <Row className="g-4 mb-5 values-row">
@@ -99,7 +124,7 @@ function About() {
           </Col>
         </Row>
 
-        <Row className="bg-light rounded p-3 p-sm-4 align-items-center gx-3 join-row">
+        {/* <Row className="bg-light rounded p-3 p-sm-4 align-items-center gx-3 join-row">
           <Col xs={12} lg={8}>
             <h3 className="mb-1">Join Our Team</h3>
             <p className="mb-0">
@@ -112,8 +137,27 @@ function About() {
               Apply Now
             </Link>
           </Col>
-        </Row>
+        </Row> */}
       </Container>
+      <section className="bg-light py-5">
+              <Container>
+                <h2 className="text-center mb-4">Book Your Ride Today</h2>
+                <p className="text-center lead">
+                  Experience the difference with our premium taxi service. Whether you need a ride to the airport,
+                  a business meeting, or just around town, we are here for you.
+                </p>
+                <div className="text-center mt-4 d-flex flex-column flex-sm-row justify-content-center gap-3 px-3">
+                  <a href="tel:+1234567890" className="btn btn-warning btn-lg btn-block-mobile" aria-label="Call Taxi Service">
+                    <i className="bi bi-telephone-fill me-2" aria-hidden="true"></i>
+                    <span>Call Now</span>
+                  </a>
+                  <Link to="/contact" className="btn btn-dark btn-lg btn-block-mobile" aria-label="Contact us">
+                    <i className="bi bi-car-front-fill me-2" aria-hidden="true"></i>
+                    <span>Book Now</span>
+                  </Link>
+                </div>
+              </Container>
+            </section>
     </>
   );
 }

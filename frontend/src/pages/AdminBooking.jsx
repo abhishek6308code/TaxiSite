@@ -134,17 +134,18 @@ export default function AdminBookings() {
     const ws = XLSX.utils.json_to_sheet(rows);
     const wb = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, ws, 'Leads');
-    XLSX.writeFile(wb, `leads_${new Date().toISOString().slice(0,10)}.xlsx`);
+    XLSX.writeFile(wb, `leads_${new Date().toISOString().slice(0, 10)}.xlsx`);
   };
 
   // Render card for booking
   const BookingCard = ({ b }) => (
-    <Card className="h-100 shadow-sm">
+    <Card className="h-100 shadow-sm booking-card">
       <Card.Body className="d-flex flex-column">
         <div className="d-flex justify-content-between align-items-start mb-2">
           <div>
             <Card.Title className="mb-0" style={{ fontSize: '1rem' }}>{b.name}</Card.Title>
-            <small className="text-muted">{b.email} • {b.phone}</small>
+            <small className="text-muted">{b.email} • {b.phone}</small><br />
+            <small className="text-muted"><b>Message:</b> {b.message || '—'}</small>
           </div>
           <div className="text-end">
             <BadgeStatus status={b.status} />
@@ -152,8 +153,8 @@ export default function AdminBookings() {
         </div>
 
         <Card.Text className="small mb-2" style={{ flex: 1 }}>
-          <strong>Pickup:</strong> {b.pickup || '—'}<br/>
-          <strong>Drop:</strong> {b.drop || '—'}<br/>
+          <strong>Pickup:</strong> {b.pickup || '—'}<br />
+          <strong>Drop:</strong> {b.drop || '—'}<br />
           <strong>Car:</strong> {b.car || '—'} • <strong>Passengers:</strong> {b.passengers || 1}
         </Card.Text>
 
@@ -167,14 +168,20 @@ export default function AdminBookings() {
 
           <div className="d-flex align-items-center">
             <small className="me-2 text-muted">Status</small>
-            <Dropdown as={ButtonGroup}>
+            <Dropdown as={ButtonGroup} drop="up" className="booking-status-dropdown" popperConfig={{
+              strategy: 'fixed',
+              modifiers: [
+                { name: 'preventOverflow', options: { boundary: 'viewport' } },
+                { name: 'flip', options: { fallbackPlacements: ['top'] } } // forces only upward if possible
+              ]
+            }}>
               <Dropdown.Toggle size="sm" variant="secondary" id={`status-${b._id}`}>
                 {b.status}
               </Dropdown.Toggle>
               <Dropdown.Menu>
-                <Dropdown.Item onClick={() => changeStatus(b._id, 'new')}>new</Dropdown.Item>
-                <Dropdown.Item onClick={() => changeStatus(b._id, 'accepted')}>accepted</Dropdown.Item>
-                <Dropdown.Item onClick={() => changeStatus(b._id, 'rejected')}>rejected</Dropdown.Item>
+                <Dropdown.Item onClick={() => changeStatus(b._id, 'new')}>New</Dropdown.Item>
+                <Dropdown.Item onClick={() => changeStatus(b._id, 'accepted')}>Accepeted</Dropdown.Item>
+                <Dropdown.Item onClick={() => changeStatus(b._id, 'rejected')}>Rejected</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
           </div>

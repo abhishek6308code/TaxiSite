@@ -42,7 +42,10 @@ function NavigationBar() {
                 SERVICE
               </Nav.Link>
               <Nav.Link as={Link} to="/contact" className="nav-item-custom">
-                CONTACT US
+                <p  className="btn btn-warning btn-lg btn-block-mobile" aria-label="Contact us">
+                  <i className="bi bi-car-front-fill me-2" aria-hidden="true"></i>
+                  <span>Book Now</span>
+                </p>
               </Nav.Link>
               <Nav.Link as={Link} to="/admin/bookings" className="nav-item-custom">
                 ADMIN BOOKINGS

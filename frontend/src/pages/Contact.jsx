@@ -1,180 +1,4 @@
-// import { Container, Row, Col, Form, Button, Card, Alert } from 'react-bootstrap';
-// import { useState } from 'react';
 
-// function Contact() {
-//   const [status, setStatus] = useState(null); // null | 'success' | 'error'
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     // For demo we simulate success; integrate with backend service when available
-//     setStatus('success');
-//     // clear status after a short delay
-//     setTimeout(() => setStatus(null), 6000);
-//     e.target.reset();
-//   };
-
-//   return (
-//     <>
-//       <section className="bg-dark text-white py-5 vw-100">
-//         <Container>
-//           <h1 className="text-center mb-3">Contact Us</h1>
-//           <p className="text-center lead">
-//             We're here to help. Reach out to us anytime!
-//           </p>
-//         </Container>
-//       </section>
-
-//       <Container className="my-5">
-//         <Row className="g-4">
-//           <Col lg={6}>
-//             <h2 className="mb-4">Get In Touch</h2>
-//             <p className="mb-4">
-//               Have a question or need to book a ride? Fill out the form and we'll respond as soon as possible.
-//               You can also reach us directly through phone or email.
-//             </p>
-
-//             <Card className="mb-3 border-0 shadow-sm">
-//               <Card.Body>
-//                 <h5>
-//                   <i className="bi bi-telephone-fill text-warning me-3"></i>
-//                   Phone
-//                 </h5>
-//                 <p className="mb-0 ms-5">
-//                   <a href="tel:+15551234567" className="text-decoration-none text-dark" aria-label="Call TaxiCab Service">+1 (555) 123-4567</a>
-//                 </p>
-//               </Card.Body>
-//             </Card>
-
-//             <Card className="mb-3 border-0 shadow-sm">
-//               <Card.Body>
-//                 <h5>
-//                   <i className="bi bi-envelope-fill text-warning me-3"></i>
-//                   Email
-//                 </h5>
-//                 <p className="mb-0 ms-5">
-//                   <a href="mailto:info@taxicabservice.com" className="text-decoration-none text-dark" aria-label="Email TaxiCab Service">info@taxicabservice.com</a>
-//                 </p>
-//               </Card.Body>
-//             </Card>
-
-//             <Card className="mb-3 border-0 shadow-sm">
-//               <Card.Body>
-//                 <h5>
-//                   <i className="bi bi-geo-alt-fill text-warning me-3"></i>
-//                   Address
-//                 </h5>
-//                 <p className="mb-0 ms-5">
-//                   123 Main Street<br />
-//                   City, State 12345<br />
-//                   United States
-//                 </p>
-//               </Card.Body>
-//             </Card>
-
-//             <Card className="mb-3 border-0 shadow-sm">
-//               <Card.Body>
-//                 <h5>
-//                   <i className="bi bi-clock-fill text-warning me-3"></i>
-//                   Business Hours
-//                 </h5>
-//                 <p className="mb-0 ms-5">
-//                   24/7 - We're always available!
-//                 </p>
-//               </Card.Body>
-//             </Card>
-//           </Col>
-
-//           <Col lg={6}>
-//             <Card className="shadow">
-//               <Card.Body className="p-4">
-//                 <h3 className="mb-4">Send Us a Message</h3>
-//                 {status === 'success' && (
-//                   <Alert variant="success">Thanks — we received your message and will reply shortly.</Alert>
-//                 )}
-//                 <Form onSubmit={handleSubmit}>
-//                   <Form.Group className="mb-3" controlId="contactName">
-//                     <Form.Label>Full Name</Form.Label>
-//                     <Form.Control
-//                       name="name"
-//                       type="text"
-//                       placeholder="Enter your name"
-//                       required
-//                     />
-//                   </Form.Group>
-
-//                   <Form.Group className="mb-3" controlId="contactEmail">
-//                     <Form.Label>Email Address</Form.Label>
-//                     <Form.Control
-//                       name="email"
-//                       type="email"
-//                       placeholder="Enter your email"
-//                       required
-//                     />
-//                   </Form.Group>
-
-//                   <Form.Group className="mb-3" controlId="contactPhone">
-//                     <Form.Label>Phone Number</Form.Label>
-//                     <Form.Control
-//                       name="phone"
-//                       type="tel"
-//                       placeholder="Enter your phone number"
-//                       required
-//                     />
-//                   </Form.Group>
-
-//                   <Form.Group className="mb-3" controlId="contactService">
-//                     <Form.Label>Service Type</Form.Label>
-//                     <Form.Select name="service" required>
-//                       <option value="">Select a service</option>
-//                       <option value="airport">Airport Transfer</option>
-//                       <option value="city">City Tours</option>
-//                       <option value="corporate">Corporate Services</option>
-//                       <option value="events">Special Events</option>
-//                       <option value="other">Other</option>
-//                     </Form.Select>
-//                   </Form.Group>
-
-//                   <Form.Group className="mb-4" controlId="contactMessage">
-//                     <Form.Label>Message</Form.Label>
-//                     <Form.Control
-//                       name="message"
-//                       as="textarea"
-//                       rows={4}
-//                       placeholder="Tell us how we can help you"
-//                       required
-//                     />
-//                   </Form.Group>
-
-//                   <Button variant="warning" type="submit" size="lg" className="w-100">
-//                     <i className="bi bi-send me-2" aria-hidden="true"></i>
-//                     Send Message
-//                   </Button>
-//                 </Form>
-//               </Card.Body>
-//             </Card>
-//           </Col>
-//         </Row>
-
-//         <Row className="mt-5">
-//           <Col>
-//             <Card className="bg-warning">
-//               <Card.Body className="text-center py-4">
-//                 <h3>Need a Ride Right Now?</h3>
-//                 <p className="mb-3">Call us directly for immediate service</p>
-//                 <a href="tel:+15551234567" className="btn btn-dark btn-lg" aria-label="Call TaxiCab Service">
-//                   <i className="bi bi-telephone-fill me-2" aria-hidden="true"></i>
-//                   Call Now: +1 (555) 123-4567
-//                 </a>
-//               </Card.Body>
-//             </Card>
-//           </Col>
-//         </Row>
-//       </Container>
-//     </>
-//   );
-// }
-
-// export default Contact;
 import { Container, Row, Col, Form, Button, Card, Alert } from 'react-bootstrap';
 import { useState } from 'react';
 import axios from 'axios';
@@ -211,6 +35,82 @@ function Contact() {
           : value,
     }));
   };
+//   const handleSubmit = async (e) => {
+//   e.preventDefault();
+
+//   // basic client-side required-check
+//   if (!form.name.trim() || !form.email.trim() || !form.phone.trim()) {
+//     setStatus('error');
+//     alert('Please complete required fields: Name, Email, Phone.');
+//     return;
+//   }
+
+//   setLoading(true);
+//   setStatus(null);
+
+//   // normalize payload exactly as backend is likely to expect:
+//   const payload = {
+//     name: form.name.trim(),
+//     email: form.email.trim(),
+//     phone: String(form.phone).trim(),
+//     pickup: form.pickup?.trim() || '',
+//     drop: form.drop?.trim() || '',
+//     tripType: form.tripType || '',    // check expected values (e.g. 'oneway' vs 'Oneway')
+//     car: form.car || '',
+//     passengers: Number(form.passengers) || 1,
+//     date: form.date || '',
+//     time: form.time || '',
+//     message: form.message?.trim() || ''
+//   };
+
+//   try {
+//     const res = await axios.post(API_ENDPOINT, payload, {
+//       headers: { 'Content-Type': 'application/json' },
+//     });
+
+//     console.log('Submit success', res.data);
+//     setStatus('success');
+//     setForm({
+//       name: '',
+//       pickup: '',
+//       drop: '',
+//       tripType: '',
+//       email: '',
+//       phone: '',
+//       date: '',
+//       time: '',
+//       car: '',
+//       passengers: 1,
+//       message: '',
+//     });
+//   } catch (err) {
+//     console.error('Submit error:', err);
+
+//     // show server-provided message when available (most helpful)
+//     if (err.response) {
+//       console.error('Response status:', err.response.status);
+//       console.error('Response body:', err.response.data);
+
+//       // smartly extract message from common shapes
+//       const serverMsg =
+//         (err.response.data && (err.response.data.error || err.response.data.message)) ||
+//         (typeof err.response.data === 'string' ? err.response.data : JSON.stringify(err.response.data));
+
+//       alert(`Submit failed: ${serverMsg} (status ${err.response.status})`);
+//     } else if (err.request) {
+//       console.error('No response:', err.request);
+//       alert('No response from server — check server is running and CORS.');
+//     } else {
+//       alert('Error: ' + err.message);
+//     }
+
+//     setStatus('error');
+//   } finally {
+//     setLoading(false);
+//     setTimeout(() => setStatus(null), 6000);
+//   }
+// };
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -278,7 +178,7 @@ function Contact() {
                   Phone
                 </h6>
                 <p className="mb-0 ms-4">
-                  <a href="tel:+15551234567" className="text-decoration-none text-dark" aria-label="Call TaxiCab Service">+1 (555) 123-4567</a>
+                  <a href="tel:+916307239240" className="text-decoration-none text-dark" aria-label="Call TaxiCab Service">+91 6307239240</a>
                 </p>
               </Card.Body>
             </Card>
@@ -290,7 +190,7 @@ function Contact() {
                   Email
                 </h6>
                 <p className="mb-0 ms-4">
-                  <a href="mailto:info@taxicabservice.com" className="text-decoration-none text-dark" aria-label="Email TaxiCab Service">info@taxicabservice.com</a>
+                  <a href="abhisheksingh19217.com.com" className="text-decoration-none text-dark" aria-label="Email TaxiCab Service">info@taxicabservice.com</a>
                 </p>
               </Card.Body>
             </Card>
@@ -302,9 +202,9 @@ function Contact() {
                   Address
                 </h6>
                 <p className="mb-0 ms-4 small">
-                  123 Main Street<br />
-                  City, State 12345<br />
-                  United States
+                  Rajpur Road NEIPVD<br />
+                  DEHRADUN, UTTARAKHAND<br />
+                  India
                 </p>
               </Card.Body>
             </Card>
@@ -450,9 +350,9 @@ function Contact() {
                           onChange={handleChange}
                           className="form-select-sm"
                         >
-                          <option value="">Trip type</option>
-                          <option value="oneway">One Way</option>
-                          <option value="roundtrip">Round Trip</option>
+                          {/* <option value="">Trip type</option> */}
+                          <option value="Oneway">One Way</option>
+                          <option value="Roundtrip">Round Trip</option>
                         </Form.Select>
                       </Form.Group>
                     </Col>
@@ -473,6 +373,7 @@ function Contact() {
                           <option value="minivan">Minivan - 8 seats</option>
                           <option value="luxury">Luxury</option>
                           <option value="economy">Economy</option>
+                          <option value="tourist">Tourist Bus</option>
                         </Form.Select>
                       </Form.Group>
                     </Col>
@@ -534,7 +435,7 @@ function Contact() {
                       ) : (
                         <>
                           <i className="bi bi-send me-2" aria-hidden="true"></i>
-                          Send / Book
+                          Submit
                         </>
                       )}
                     </Button>
@@ -551,9 +452,9 @@ function Contact() {
               <Card.Body className="text-center py-3">
                 <h5 className="mb-1">Need a Ride Right Now?</h5>
                 <p className="mb-2 small">Call us directly for immediate service</p>
-                <a href="tel:+15551234567" className="btn btn-dark btn-sm" aria-label="Call TaxiCab Service">
+                <a href="tel:+916307239240" className="btn btn-dark btn-sm" aria-label="Call TaxiCab Service">
                   <i className="bi bi-telephone-fill me-2" aria-hidden="true"></i>
-                  Call Now: +1 (555) 123-4567
+                  Call Now: +91 6307239240
                 </a>
               </Card.Body>
             </Card>

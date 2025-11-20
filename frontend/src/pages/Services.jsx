@@ -1,10 +1,12 @@
 import { Container, Row, Col, Card, ListGroup } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import airport2 from '../assets/image/airport2.jpg';
-import citytour from '../assets/image/citytour.jpg';
-import car3 from '../assets/image/car3.jpg';
-import car1 from '../assets/image/car1.jpg';
 
+import citytour from '../assets/image/citytour.jpg';
+import Airport from '../assets/image/Airport0.jpg';
+import CorporateService from '../assets/image/CorporateService.jpg';
+import SpecialEvent from '../assets/image/SpecialEvent.jpg';
+
+import ServiceFareTable from './ServiceTable';
 function Services() {
   return (
     <>
@@ -24,15 +26,15 @@ function Services() {
               <Card.Img
                 variant="top"
                 // src="https://images.pexels.com/photos/1454360/pexels-photo-1454360.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                src={airport2}
+                src={Airport}
                 style={{ height: '250px', objectFit: 'cover' }}
                 loading="lazy"
                 alt="Airport transfer vehicle"
               />
               <Card.Body>
                 <Card.Title className="h3">
-                  <i className="bi bi-airplane text-warning me-2"></i>
-                  Airport Transfer
+                  <i className="bi bi-airplane text-warning me-2">Airport Transfer</i>
+                  
                 </Card.Title>
                 <Card.Text>
                   Reliable airport pickup and drop-off services. We monitor flight schedules to ensure
@@ -59,8 +61,8 @@ function Services() {
               />
               <Card.Body>
                 <Card.Title className="h3">
-                  <i className="bi bi-geo-alt text-warning me-2"></i>
-                  City Tours
+                  <i className="bi bi-geo-alt text-warning me-2">City Tours</i>
+                  
                 </Card.Title>
                 <Card.Text>
                   Explore the city with our knowledgeable drivers who can show you the best spots.
@@ -80,15 +82,15 @@ function Services() {
               <Card.Img
                 variant="top"
                 // src="https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                src={car1}
+                src={CorporateService}
                 style={{ height: '250px', objectFit: 'cover' }}
                 loading="lazy"
                 alt="Corporate transport"
               />
               <Card.Body>
                 <Card.Title className="h3">
-                  <i className="bi bi-briefcase text-warning me-2"></i>
-                  Corporate Services
+                  <i className="bi bi-briefcase text-warning me-2"> Corporate Services</i>
+                 
                 </Card.Title>
                 <Card.Text>
                   Professional transportation for your business needs. From executive travel to employee
@@ -108,15 +110,15 @@ function Services() {
               <Card.Img
                 variant="top"
                 // src="https://images.pexels.com/photos/6368962/pexels-photo-6368962.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                src={car3}
+                src={SpecialEvent}
                 style={{ height: '250px', objectFit: 'cover' }}
                 loading="lazy"
                 alt="Event transportation"
               />
               <Card.Body>
                 <Card.Title className="h3">
-                  <i className="bi bi-calendar-event text-warning me-2"></i>
-                  Special Events
+                  <i className="bi bi-calendar-event text-warning me-2"> Special Events</i>
+                 
                 </Card.Title>
                 <Card.Text>
                   Make your special occasions memorable with our event transportation services.
@@ -146,6 +148,26 @@ function Services() {
           </Col>
         </Row>
       </Container>
+      <section className="bg-light py-5">
+        <Container>
+          <h2 className="text-center mb-4">Book Your Ride Today</h2>
+          <p className="text-center lead">
+            Experience the difference with our premium taxi service. Whether you need a ride to the airport,
+            a business meeting, or just around town, we are here for you.
+          </p>
+          <div className="text-center mt-4 d-flex flex-column flex-sm-row justify-content-center gap-3 px-3">
+            <a href="tel:+1234567890" className="btn btn-warning btn-lg btn-block-mobile" aria-label="Call Taxi Service">
+              <i className="bi bi-telephone-fill me-2" aria-hidden="true"></i>
+              <span>Call Now</span>
+            </a>
+            <Link to="/contact" className="btn btn-dark btn-lg btn-block-mobile" aria-label="Contact us">
+              <i className="bi bi-car-front-fill me-2" aria-hidden="true"></i>
+              <span>Book Now</span>
+            </Link>
+          </div>
+        </Container>
+        <ServiceFareTable />
+      </section>
     </>
   );
 }

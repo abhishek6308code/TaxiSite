@@ -1,0 +1,68 @@
+/* ===== Service / Fare Table Styles ===== */
+.service-fare-section {
+  background: #ffffff;
+}
+
+/* table wrapper */
+.fare-table-wrapper {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* main table style */
+.fare-table thead th {
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.fare-table tbody tr {
+  transition: background 0.18s ease, transform 0.12s ease;
+}
+
+.fare-table tbody tr:hover {
+  background: rgba(255, 193, 7, 0.08); /* subtle yellow on hover */
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+/* zebra rows for readability */
+.fare-table tbody tr:nth-child(odd) {
+  background: rgba(0,0,0,0.02);
+}
+
+/* make long cells wrap nicely */
+.fare-table td, .fare-table th {
+  word-break: break-word;
+  vertical-align: middle;
+}
+
+/* small tweak for narrow cells */
+.fare-table td:first-child {
+  font-weight: 600;
+}
+
+/* mobile card variants */
+.fare-card {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.fare-card .card-body {
+  padding: 1rem;
+}
+
+/* badges and CTA spacing */
+.service-fare-section .btn {
+  min-width: 220px;
+}
+
+/* responsive typography adjustments */
+@media (min-width: 768px) {
+  .service-fare-section h2 { font-size: 1.9rem; }
+}
+
+@media (max-width: 576px) {
+  .fare-card .card-title { font-size: 1rem; }
+  .service-fare-section .btn { width: 100%; }
+}

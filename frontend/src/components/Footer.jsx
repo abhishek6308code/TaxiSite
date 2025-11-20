@@ -10,7 +10,7 @@ function Footer() {
           <Col md={4} className="mb-3 mb-md-0">
             <h5 className="text-warning mb-3">TaxiCab Service</h5>
             <p>
-              Your trusted transportation partner, providing reliable and safe taxi services 24/7.
+              Your trusted TaxiCab service and transportation partner, providing reliable and safe taxi services 24/7.
             </p>
           </Col>
           <Col md={4} className="mb-3 mb-md-0">
@@ -26,22 +26,22 @@ function Footer() {
             <h5 className="text-warning mb-3">Contact Info</h5>
             <p className="mb-2">
               <i className="bi bi-telephone-fill me-2" aria-hidden="true"></i>
-              <a href="tel:+15551234567" className="text-white text-decoration-none">+1 (555) 123-4567</a>
+              <a href="tel:+916307239240" className="text-white text-decoration-none">+91 6307239240</a>
             </p>
             <p className="mb-2">
               <i className="bi bi-envelope-fill me-2" aria-hidden="true"></i>
-              <a href="mailto:info@taxicabservice.com" className="text-white text-decoration-none">info@taxicabservice.com</a>
+              <a href="mailto:info@taxicabservice.com" className="text-white text-decoration-none">abhisheksingh19217@gmail.com</a>
             </p>
             <p className="mb-2">
               <i className="bi bi-geo-alt-fill me-2" aria-hidden="true"></i>
-              123 Main Street, City, State 12345
+              Rajpur Road NEIPVD, DEHRADUN, UTTARAKHAND
             </p>
           </Col>
         </Row>
         <hr className="my-4 bg-secondary" />
         <Row>
           <Col className="text-center">
-            <p className="mb-0 small">&copy; 2024 TaxiCab Service. All rights reserved.</p>
+            <p className="mb-0 small">&copy; 2025 TaxiCab Service. All rights reserved. &nbsp; &nbsp;Developed By Hiverhive Media</p>
           </Col>
         </Row>
       </Container>
