@@ -92,8 +92,8 @@ export default function ServiceFareTable() {
         </p>
 
         {/* Desktop / Tablet Table */}
-        <div className="table-responsive shadow-sm d-none d-md-block fare-table-wrapper">
-          <table className="table table-hover align-middle fare-table">
+        <div className="table-responsive shadow-sm d-none d-md-block fare-table-wrapper rounded-2">
+          <table className="table table-hover align-middle fare-table ">
             <thead className="table-dark">
               <tr>
                 <th>Route</th>
