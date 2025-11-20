@@ -1,13 +1,6 @@
 import React from "react";
 
-/**
- * ServiceFareTable.jsx
- * Drop <ServiceFareTable /> where you want the table to appear (I show how to place it in Services.jsx).
- *
- * Notes:
- * - Distances and fares are approximate. Update as per your pricing.
- * - Table view is shown on md+ screens; mobile shows stacked cards.
- */
+
 
 const ROUTES = [
   {

@@ -93,7 +93,7 @@
 .offcanvas .nav-link:hover,
 .offcanvas .nav-link:focus {
   color: #fff;
-  background-color: rgba(255,255,255,0.03);
+  background-color: rgba(255,255,255,0.09);
 }
 
 /* Ensure offcanvas close button is visible */

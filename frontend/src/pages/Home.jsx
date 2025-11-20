@@ -16,6 +16,7 @@ import c2 from '../assets/image/c2.jpg';
 import c3 from '../assets/image/c3.jpg';
 import c4 from '../assets/image/c4.jpg';
 import c5 from '../assets/image/c5.jpg';
+import Dehradun from '../assets/image/Dehradun.jpg';
 // import puchingjumping2 from '../assets/image/puchingjumping2.jpg';
 import Services from './Services.jsx';
 function Home() {
@@ -38,6 +39,15 @@ function Home() {
   controls={true} 
   indicators={true}
 >
+  
+  <Carousel.Item>
+    <img className="d-block home-carousel-img" src={Dehradun} alt="Taxi Service 2" loading="lazy" />
+    <Carousel.Caption className="home-caption">
+      <h1>Safe & Comfortable Rides</h1>
+      <p>Professional drivers ensuring your safety and comfort</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+
   <Carousel.Item>
     <img className="d-block home-carousel-img" src={TaxiSiteCrausal} alt="Taxi Service 1" loading="lazy" />
     <Carousel.Caption className="home-caption">
@@ -92,59 +102,7 @@ function Home() {
   </Carousel.Item>
 </Carousel>
 
-    {/* <Carousel interval={intervalMs} pause="hover" touch indicators controls>
-      <Carousel.Item>
-        <img
-          style={imageStyle}
-          className="d-block w-100"
-          src="https://picsum.photos/1600/900?random=1"
-          alt="Slide 1"
-        />
-        <Carousel.Caption>
-          <h3>Slide 1 Title</h3>
-          <p>Subtitle or description for slide 1.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-
-      <Carousel.Item>
-        <img
-          style={imageStyle}
-          className="d-block w-100"
-          src="https://picsum.photos/1600/900?random=2"
-          alt="Slide 2"
-        />
-        <Carousel.Caption>
-          <h3>Slide 2 Title</h3>
-          <p>Subtitle or description for slide 2.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-
-      <Carousel.Item>
-        <img
-          style={imageStyle}
-          className="d-block w-100"
-          src="https://picsum.photos/1600/900?random=3"
-          alt="Slide 3"
-        />
-        <Carousel.Caption>
-          <h3>Slide 3 Title</h3>
-          <p>Subtitle or description for slide 3.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-
-      <Carousel.Item>
-        <img
-          style={imageStyle}
-          className="d-block w-100"
-          src="https://picsum.photos/1600/900?random=4"
-          alt="Slide 4"
-        />
-        <Carousel.Caption>
-          <h3>Slide 4 Title</h3>
-          <p>Subtitle or description for slide 4.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel> */}
+   
 
       <Container className="my-5">
         <h2 className="text-center mb-4">Why Choose Us</h2>
@@ -262,198 +220,3 @@ function Home() {
 export default Home;
 
 
-// import React from 'react';
-// import { Carousel, Container, Row, Col, Card } from 'react-bootstrap';
-// import { Link } from 'react-router-dom';
-// import './Home.css';
-// import rishikesh from '../assets/image/rishikesh.jpg';
-// import TaxiSiteCrausal from '../assets/image/TaxiSiteCrausal1.jpg';
-// import service from '../assets/image/service.jpg';
-// import car0 from '../assets/image/car0.jpg';
-// import recievingpassenger from '../assets/image/recievingpassenger.jpg';
-// import price from '../assets/image/price.jpg';
-// import temple2 from '../assets/image/temple2.jpg';
-// import temple from '../assets/image/temple.jpg';
-// import Services from './Services.jsx';
-
-// function Home() {
-//   return (
-//     <>
-//       {/* interval is in ms. Set to 1000 for 1 second per slide */}
-//       <Carousel
-//         interval={1000}
-//         pause="hover"
-//         touch
-//         fade={false}
-//         controls
-//         indicators
-//       >
-//         <Carousel.Item>
-//           <img
-//             className="d-block w-100 home-carousel-img"
-//             src={TaxiSiteCrausal}
-//             alt="Taxi Service 1"
-//             loading="lazy"
-//           />
-//           <Carousel.Caption className="home-caption">
-//             <h1>Reliable Taxi Service</h1>
-//             <p>Your trusted transportation partner, available 24/7</p>
-//           </Carousel.Caption>
-//         </Carousel.Item>
-
-//         <Carousel.Item>
-//           <img
-//             className="d-block w-100 home-carousel-img"
-//             src={recievingpassenger}
-//             alt="Taxi Service 2"
-//             loading="lazy"
-//           />
-//           <Carousel.Caption className="home-caption">
-//             <h1>Safe & Comfortable Rides</h1>
-//             <p>Professional drivers ensuring your safety and comfort</p>
-//           </Carousel.Caption>
-//         </Carousel.Item>
-
-//         <Carousel.Item>
-//           <img
-//             className="d-block w-100 home-carousel-img"
-//             src={car0}
-//             alt="Taxi Service 3"
-//             loading="lazy"
-//           />
-//           <Carousel.Caption className="home-caption">
-//             <h1>Affordable Rates</h1>
-//             <p>Competitive pricing with no hidden charges</p>
-//           </Carousel.Caption>
-//         </Carousel.Item>
-
-//         <Carousel.Item>
-//           <img
-//             className="d-block w-100 home-carousel-img"
-//             src={price}
-//             alt="Taxi Service 4"
-//             loading="lazy"
-//           />
-//           <Carousel.Caption className="home-caption">
-//             <h1>Quick Response Time</h1>
-//             <p>We arrive promptly when you need us</p>
-//           </Carousel.Caption>
-//         </Carousel.Item>
-
-//         <Carousel.Item>
-//           <img
-//             className="d-block w-100 home-carousel-img"
-//             src={TaxiSiteCrausal}
-//             alt="Taxi Service 5"
-//             loading="lazy"
-//           />
-//           <Carousel.Caption className="home-caption">
-//             <h1>Modern Fleet</h1>
-//             <p>Well-maintained vehicles for a smooth journey</p>
-//           </Carousel.Caption>
-//         </Carousel.Item>
-//       </Carousel>
-
-//       <Container className="my-5">
-//         <h2 className="text-center mb-4">Why Choose Us</h2>
-//         <Row className="g-4">
-//           <Col xs={12} sm={6} md={6} lg={3}>
-//             <Card className="h-100 text-center shadow-sm card-hover">
-//               <div className="card-img-wrapper">
-//                 <Card.Img
-//                   variant="top"
-//                   src={service}
-//                   className="card-top-img"
-//                   loading="lazy"
-//                   alt="24/7 service"
-//                 />
-//               </div>
-//               <Card.Body>
-//                 <Card.Title>24/7 Service</Card.Title>
-//                 <Card.Text>Available round the clock for your convenience</Card.Text>
-//               </Card.Body>
-//             </Card>
-//           </Col>
-
-//           <Col xs={12} sm={6} md={6} lg={3}>
-//             <Card className="h-100 text-center shadow-sm card-hover">
-//               <div className="card-img-wrapper">
-//                 <Card.Img
-//                   variant="top"
-//                   src={recievingpassenger}
-//                   className="card-top-img"
-//                   loading="lazy"
-//                   alt="Professional drivers"
-//                 />
-//               </div>
-//               <Card.Body>
-//                 <Card.Title>Professional Drivers</Card.Title>
-//                 <Card.Text>Experienced and courteous drivers at your service</Card.Text>
-//               </Card.Body>
-//             </Card>
-//           </Col>
-
-//           <Col xs={12} sm={6} md={6} lg={3}>
-//             <Card className="h-100 text-center shadow-sm card-hover">
-//               <div className="card-img-wrapper">
-//                 <Card.Img
-//                   variant="top"
-//                   src={car0}
-//                   className="card-top-img"
-//                   loading="lazy"
-//                   alt="Safe travel"
-//                 />
-//               </div>
-//               <Card.Body>
-//                 <Card.Title>Safe Travel</Card.Title>
-//                 <Card.Text>Your safety is our top priority on every ride</Card.Text>
-//               </Card.Body>
-//             </Card>
-//           </Col>
-
-//           <Col xs={12} sm={6} md={6} lg={3}>
-//             <Card className="h-100 text-center shadow-sm card-hover">
-//               <div className="card-img-wrapper">
-//                 <Card.Img
-//                   variant="top"
-//                   src={price}
-//                   className="card-top-img"
-//                   loading="lazy"
-//                   alt="Best prices"
-//                 />
-//               </div>
-//               <Card.Body>
-//                 <Card.Title>Best Prices</Card.Title>
-//                 <Card.Text>Affordable rates with transparent pricing</Card.Text>
-//               </Card.Body>
-//             </Card>
-//           </Col>
-//         </Row>
-//       </Container>
-
-//       <section className="bg-light py-5">
-//         <Container>
-//           <h2 className="text-center mb-4">Book Your Ride Today</h2>
-//           <p className="text-center lead">
-//             Experience the difference with our premium taxi service. Whether you need a ride to the airport,
-//             a business meeting, or just around town, we are here for you.
-//           </p>
-//           <div className="text-center mt-4 d-flex flex-column flex-sm-row justify-content-center gap-3 px-3">
-//             <a href="tel:+1234567890" className="btn btn-warning btn-lg btn-block-mobile" aria-label="Call Taxi Service">
-//               <i className="bi bi-telephone-fill me-2" aria-hidden="true"></i>
-//               <span>Call Now</span>
-//             </a>
-//             <Link to="/contact" className="btn btn-dark btn-lg btn-block-mobile" aria-label="Contact us">
-//               <i className="bi bi-envelope-fill me-2" aria-hidden="true"></i>
-//               <span>Contact Us</span>
-//             </Link>
-//           </div>
-//         </Container>
-//       </section>
-
-//       <Services />
-//     </>
-//   );
-// }
-
-// export default Home;

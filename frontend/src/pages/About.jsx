@@ -4,6 +4,7 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./About.css";
 import fleet from '../assets/image/fleet.jpg';
+import Luxary from '../assets/image/Luxary.jpg';
 import taxisite from '../assets/image/TaxiSiteCrausal1.jpg';
 
 import recievingpassenger from '../assets/image/recievingpassenger.jpg';
@@ -42,11 +43,11 @@ function About() {
 
           <Col xs={9} lg={6} className="order-0 order-lg-1">
             <h2>Our Story</h2>
-            <p>
+            <p className="fs-5">
               At Radha Travel, we believe every journey should be safe, comfortable, and hassle-free. With years of experience in the transportation industry, we take pride in offering reliable taxi services that meet the needs of locals, tourists, families, and business travelers alike.
             </p>
             <p>
-              Our mission is simple — to provide punctual, affordable, and comfortable rides that you can depend on anytime, anywhere.
+              Our mission is simple to provide punctual, affordable, and comfortable rides that you can depend on anytime, anywhere.
             </p>
           </Col>
         </Row>
@@ -54,18 +55,18 @@ function About() {
         <Row className="align-items-center mb-5">
           <Col xs={12} lg={6} className="order-1 order-lg-0">
             <h2>Who WE Are</h2>
-            <p>
+            <p className="fs-5">
              We are a dedicated taxi service company committed to offering high-quality transportation with a focus on safety, professionalism, and customer satisfaction. Our team of trained and courteous drivers ensures that every ride with us is smooth and secure.
             </p>
             <p>
-              With a growing fleet of well-maintained vehicles, we are equipped to handle all types of travel needs — from daily city rides to long-distance journeys.
+              With a growing fleet of well-maintained vehicles, we are equipped to handle all types of travel needs from daily city rides to long-distance journeys.
             </p>
           </Col>
           {/* image first on mobile then text on larger screens */}
           <Col xs={12} lg={6} className="mb-4 mb-lg-0 order-0 order-lg-1">
             <img
               // src="https://images.pexels.com/photos/1329711/pexels-photo-1329711.jpeg?auto=compress&cs=tinysrgb&w=1200"
-              src={fleet}
+              src={Luxary}
               alt="Our Story"
               className="img-fluid rounded shadow w-100 about-hero-img"
               loading="lazy"
@@ -124,20 +125,7 @@ function About() {
           </Col>
         </Row>
 
-        {/* <Row className="bg-light rounded p-3 p-sm-4 align-items-center gx-3 join-row">
-          <Col xs={12} lg={8}>
-            <h3 className="mb-1">Join Our Team</h3>
-            <p className="mb-0">
-              Are you a professional driver looking for a great opportunity? We're always looking for
-              dedicated individuals to join our team. Competitive pay, flexible hours, and supportive management.
-            </p>
-          </Col>
-          <Col xs={12} lg={4} className="text-lg-end mt-3 mt-lg-0">
-            <Link to="/contact" className="btn btn-warning btn-lg apply-btn w-100 w-lg-auto" aria-label="Apply to join our team">
-              Apply Now
-            </Link>
-          </Col>
-        </Row> */}
+      
       </Container>
       <section className="bg-light py-5">
               <Container>
